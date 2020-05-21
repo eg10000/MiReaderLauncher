@@ -34,9 +34,9 @@ class AppsViewModel(application: Application) : AndroidViewModel(application) {
             var intent = packageManager.getLaunchIntentForPackage(it.packageName)
             if(intent!=null) {
                 //Log.e("kagamilog",it.packageName)
-                val lab=packageManager.getApplicationLabel(it)
-                val icon=packageManager.getApplicationIcon(it)
-                val data=AppData(lab.toString(),it.packageName,icon)
+                val lab = packageManager.getApplicationLabel(it)
+                val icon = packageManager.getApplicationIcon(it)
+                val data = AppData(lab.toString(), it.packageName, icon)
                 apps.add(data)
             }
         }
